@@ -24,5 +24,11 @@
 }
 
 body {
-  font-family: 'Pretandard';
+  font-family: 'Pretandard', 'sarif';
+
+  h2 {
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 20px;
+  }
 }
