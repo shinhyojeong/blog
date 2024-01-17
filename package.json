@@ -16,6 +16,7 @@
     "lint:fix": "tsc --noEmit && eslint --ext .ts,.tsx src"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "gatsby": "^5.13.1",
     "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-sharp": "^5.13.0",

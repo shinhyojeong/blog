@@ -1,5 +1,5 @@
-import { CreateWebpackConfigArgs } from 'gatsby'
 import path from 'path'
+import type { CreateWebpackConfigArgs } from 'gatsby'
 
 const BASE_URL = './src'
 
@@ -15,7 +15,9 @@ exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
         '~/constants/*': getPath('/constants/*'),
         '~/constants': getPath('/constants'),
         '~/styles/*': getPath('/styles/*'),
-        '~/styles': getPath('/styles')
+        '~/styles': getPath('/styles'),
+        '~/utils/*': getPath('/utils/*'),
+        '~/utils': getPath('/utils')
       }
     }
   })
