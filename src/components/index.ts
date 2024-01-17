@@ -1,3 +1,4 @@
 export * from './Icon'
-export * from './Preview'
 export * from './Header'
+export * from './Profile'
+export * from './Preview'
