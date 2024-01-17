@@ -14,7 +14,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
-    './eslintrc.rules.js'
+    './.eslint.rules.js'
   ],
   plugins: ['prettier'],
   overrides: [
@@ -49,5 +49,10 @@ module.exports = {
         '@typescript-eslint/prefer-function-type': 'error'
       }
     }
-  ]
+  ],
+  settings: {
+    'import/resolver': {
+      typescript: {}
+    }
+  }
 }
