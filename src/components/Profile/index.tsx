@@ -22,7 +22,7 @@ const aboutList: About[] = [
 ]
 
 export const Profile = () => (
-  <div className="min-w-[304px]">
+  <div>
     <img
       className="rounded-full"
       height="100px"
