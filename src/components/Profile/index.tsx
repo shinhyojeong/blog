@@ -22,18 +22,18 @@ const aboutList: About[] = [
 ]
 
 export const Profile = () => (
-  <div>
+  <div className="min-w-[304px]">
     <img
       className="rounded-full"
-      height="88px"
+      height="100px"
       src="images/profile.jpeg"
-      width="88px"
+      width="100px"
     />
-    <p className="text-lg font-bold">Hyojeong Shin</p>
-    <p className="text-base text-zinc-500">
+    <p className="mt-4 text-lg font-bold">Hyojeong Shin</p>
+    <p className="text-base leading-5 text-zinc-500">
       {`Hi there 👋 I'm Hyojeong, a frontend developer.`}
     </p>
-    <div className="mt-3 flex gap-1">
+    <div className="mt-6 flex gap-1">
       {aboutList.map(({ icon, link }) => (
         <li key={icon} className="list-none">
           <a href={link} rel="noopener noreferrer" target="_blank">

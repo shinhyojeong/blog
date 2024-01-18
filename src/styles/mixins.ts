@@ -1,7 +1,4 @@
 export const mixins = {
-  // size
-  sizeFull: 'w-full h-full',
-
   // flex
   flexItemsCenter: 'flex items-center',
 
