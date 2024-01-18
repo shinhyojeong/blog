@@ -1,5 +1,5 @@
 import path from 'path'
-import type { CreateWebpackConfigArgs } from 'gatsby'
+import type { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby'
 
 const BASE_URL = './src'
 
@@ -14,11 +14,20 @@ exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
         '~/components': getPath('/components'),
         '~/constants/*': getPath('/constants/*'),
         '~/constants': getPath('/constants'),
+        '~/layout/*': getPath('/layout/*'),
+        '~/layout': getPath('/layout'),
         '~/styles/*': getPath('/styles/*'),
         '~/styles': getPath('/styles'),
         '~/utils/*': getPath('/utils/*'),
         '~/utils': getPath('/utils')
       }
     }
+  })
+}
+
+exports.createPages = ({ actions }: CreatePagesArgs) => {
+  actions.createPage({
+    path: '/',
+    component: path.resolve('./src/templates/home.tsx')
   })
 }
