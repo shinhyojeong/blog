@@ -1,5 +1,6 @@
 import path from 'path'
-import type { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby'
+import { createPages } from './gatsby/create-pages'
+import type { CreateWebpackConfigArgs } from 'gatsby'
 
 const BASE_URL = './src'
 
@@ -25,9 +26,4 @@ exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
   })
 }
 
-exports.createPages = ({ actions }: CreatePagesArgs) => {
-  actions.createPage({
-    path: '/',
-    component: path.resolve('./src/templates/home.tsx')
-  })
-}
+exports.createPages = createPages

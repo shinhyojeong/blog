@@ -8,7 +8,7 @@ const MOCKS = Array.from({ length: 20 }, () => ({
   date: '2022.1.1'
 }))
 
-const home = () => (
+const main = () => (
   <Layout>
     <div className="fixed h-full w-80 border-r border-solid border-gray-200 p-6 pl-0">
       <Profile />
@@ -24,4 +24,4 @@ const home = () => (
   </Layout>
 )
 
-export default home
+export default main
