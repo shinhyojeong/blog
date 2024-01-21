@@ -26,6 +26,12 @@
 body {
   font-family: 'Pretandard', 'sarif';
 
+  h1 {
+    font-weight: 700;
+    line-height: 52px;
+    font-size: 42px;
+  }
+
   h2 {
     font-weight: 700;
     line-height: 24px;
