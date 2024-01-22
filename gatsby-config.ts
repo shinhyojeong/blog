@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-source-contentful',
       options: {
