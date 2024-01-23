@@ -42,10 +42,10 @@ export const createPostsPage = async ({
   `)
 
   result.data?.allContentfulPost.edges.forEach(({ node }) => {
-    const { title, content, ...post } = node
+    const { title, content, tag, ...post } = node
 
     actions.createPage({
-      path: `/posts/${title}`,
+      path: `/posts/${tag}/${title}`,
       component: path.resolve('./src/templates/post.tsx'),
       context: {
         post: {

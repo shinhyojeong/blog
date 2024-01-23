@@ -25,7 +25,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
           <Preview
             content={content}
             date={formatDate(createdAt)}
-            link={`/posts/${title}`}
+            link={`/posts/${tag}/${title}`}
             tag={tag}
             title={title}
           />
