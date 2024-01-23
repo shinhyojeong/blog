@@ -1,4 +1,5 @@
 import { REGEX } from '~/utils'
+import { Tag } from '../Tag'
 
 export type PreviewProps = {
   title: string
@@ -16,6 +17,9 @@ export const Preview = ({ title, content, date, link }: PreviewProps) => (
         <p className="line-clamp-3 text-ellipsis !text-base text-slate-600">
           {content.replace(REGEX.REMOVE_HTML_TAG, '')}
         </p>
+      </div>
+      <div className="my-4">
+        <Tag>javascript</Tag>
       </div>
     </div>
   </a>
