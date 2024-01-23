@@ -18,6 +18,8 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-netlify',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-contentful',
       options: {
