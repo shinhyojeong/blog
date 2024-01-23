@@ -24,7 +24,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
           <Preview
             content={content}
             date={formatDate(createdAt)}
-            link={`/post/${id}`}
+            link={`/posts/${title}`}
             title={title}
           />
           {idx !== pageContext.posts.length - 1 && <Divider margin="my-12" />}
