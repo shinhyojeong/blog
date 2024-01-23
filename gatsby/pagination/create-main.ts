@@ -8,6 +8,7 @@ type AllContentFulPostRes = {
         // eslint-disable-next-line camelcase
         contentful_id: string
         title: string
+        tag: string
         createdAt: string
         content: {
           childMarkdownRemark: {
@@ -30,6 +31,7 @@ export const createMainPage = async ({
           node {
             contentful_id
             title
+            tag
             createdAt
             content {
               childMarkdownRemark {

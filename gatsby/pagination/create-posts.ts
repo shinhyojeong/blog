@@ -7,6 +7,7 @@ type AllContentFulPostRes = {
       node: {
         title: string
         createdAt: string
+        tag: string
         content: {
           childMarkdownRemark: {
             html: string
@@ -28,6 +29,7 @@ export const createPostsPage = async ({
           node {
             title
             createdAt
+            tag
             content {
               childMarkdownRemark {
                 html
@@ -40,15 +42,15 @@ export const createPostsPage = async ({
   `)
 
   result.data?.allContentfulPost.edges.forEach(({ node }) => {
-    const { title, createdAt, content } = node
+    const { title, content, ...post } = node
 
     actions.createPage({
       path: `/posts/${title}`,
       component: path.resolve('./src/templates/post.tsx'),
       context: {
         post: {
+          ...post,
           title,
-          createdAt,
           content: content.childMarkdownRemark.html
         }
       }

@@ -8,6 +8,7 @@ type PageContext = {
   posts: {
     id: string
     title: string
+    tag: string
     content: string
     createdAt: string
   }[]
@@ -19,12 +20,13 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
       <Profile />
     </div>
     <div className="ml-80 p-6 pr-0">
-      {pageContext.posts?.map(({ id, createdAt, title, content }, idx) => (
+      {pageContext.posts?.map(({ id, createdAt, tag, title, content }, idx) => (
         <Fragment key={id}>
           <Preview
             content={content}
             date={formatDate(createdAt)}
             link={`/posts/${title}`}
+            tag={tag}
             title={title}
           />
           {idx !== pageContext.posts.length - 1 && <Divider margin="my-12" />}

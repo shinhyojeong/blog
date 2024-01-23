@@ -2,13 +2,14 @@ import { REGEX } from '~/utils'
 import { Tag } from '../Tag'
 
 export type PreviewProps = {
+  tag: string
   title: string
   content: string
   date: string
   link: string
 }
 
-export const Preview = ({ title, content, date, link }: PreviewProps) => (
+export const Preview = ({ title, content, tag, date, link }: PreviewProps) => (
   <a href={link}>
     <div className="cursor-pointer">
       <p className="text-base text-gray-500">{date}</p>
@@ -18,8 +19,8 @@ export const Preview = ({ title, content, date, link }: PreviewProps) => (
           {content.replace(REGEX.REMOVE_HTML_TAG, '')}
         </p>
       </div>
-      <div className="my-4">
-        <Tag>javascript</Tag>
+      <div className="my-6">
+        <Tag>{tag}</Tag>
       </div>
     </div>
   </a>
