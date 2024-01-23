@@ -64,6 +64,11 @@
     text-decoration: underline;
   }
 
+  ul,
+  ol {
+    margin: 6px 0;
+  }
+
   ul > li {
     margin: 8px 0;
     position: 'relative';

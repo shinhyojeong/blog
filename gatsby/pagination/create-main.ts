@@ -5,7 +5,8 @@ type AllContentFulPostRes = {
   allContentfulPost: {
     edges: {
       node: {
-        id: string
+        // eslint-disable-next-line camelcase
+        contentful_id: string
         title: string
         createdAt: string
         content: {
@@ -25,7 +26,7 @@ export const createMainPage = async ({
       allContentfulPost {
         edges {
           node {
-            id
+            contentful_id
             title
             createdAt
             content {
@@ -38,10 +39,13 @@ export const createMainPage = async ({
   `)
 
   const posts =
-    result.data?.allContentfulPost.edges.map(({ node }) => ({
-      ...node,
-      content: node.content.content
-    })) || []
+    result.data?.allContentfulPost.edges.map(
+      ({ node: { contentful_id: id, content, ...post } }) => ({
+        ...post,
+        id,
+        content: content.content
+      })
+    ) || []
 
   actions.createPage({
     path: '/',
