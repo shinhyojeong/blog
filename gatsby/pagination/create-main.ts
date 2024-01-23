@@ -10,7 +10,9 @@ type AllContentFulPostRes = {
         title: string
         createdAt: string
         content: {
-          content: string
+          childMarkdownRemark: {
+            html: string
+          }
         }
       }
     }[]
@@ -30,7 +32,9 @@ export const createMainPage = async ({
             title
             createdAt
             content {
-              content
+              childMarkdownRemark {
+                html
+              }
             }
           }
         }
@@ -43,7 +47,7 @@ export const createMainPage = async ({
       ({ node: { contentful_id: id, content, ...post } }) => ({
         ...post,
         id,
-        content: content.content
+        content: content.childMarkdownRemark.html
       })
     ) || []
 
