@@ -51,6 +51,7 @@ export const createPostsPage = async ({
         post: {
           ...post,
           title,
+          tag,
           content: content.childMarkdownRemark.html
         }
       }
