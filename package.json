@@ -8,10 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
+    "develop": "gatsby clean && gatsby develop",
+    "build": "gatsby clean && gatsby build",
     "clean": "gatsby clean",
     "lint:fix": "tsc --noEmit && eslint --ext .ts,.tsx src"
   },
