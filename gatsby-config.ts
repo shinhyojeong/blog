@@ -4,11 +4,12 @@ import type { GatsbyConfig } from 'gatsby'
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
 })
+const SITE_URL = 'https://shinhyojeong.netlify.app'
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: SITE_URL
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -39,6 +40,21 @@ const config: GatsbyConfig = {
         ootnotes: true,
         gfm: true,
         plugins: []
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: SITE_URL,
+        stripQueryString: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: SITE_URL,
+        sitemap: `${SITE_URL}/sitemap/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ]
