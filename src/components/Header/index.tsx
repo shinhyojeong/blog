@@ -36,7 +36,7 @@ export const Header = () => {
       style={headerStyle}>
       <div className="m-auto h-full max-w-5xl px-2">
         <a className="flex h-full w-fit items-center" href="/">
-          <span className="text-2xl font-bold">신효정블로그🎶</span>
+          <span className="text-2xl font-bold">shinhyojeong.dev</span>
         </a>
       </div>
     </div>
