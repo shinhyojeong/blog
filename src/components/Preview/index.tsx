@@ -19,7 +19,7 @@ export const Preview = ({ title, content, tag, date, link }: PreviewProps) => (
           {content.replace(REGEX.REMOVE_HTML_TAG, '')}
         </p>
       </div>
-      <div className="my-6">
+      <div className="mb-6 mt-4">
         <Tag>{tag}</Tag>
       </div>
     </div>

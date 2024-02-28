@@ -23,7 +23,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
     <section className="ml-80 h-screen overflow-hidden pb-14 pl-6 pr-0">
       <div className="h-full overflow-scroll pr-3 pt-6">
         <h1>게시글 목록</h1>
-        <div className="mt-3 flex flex-col gap-4">
+        <div className="mt-3">
           {pageContext.posts?.map(
             ({ id, createdAt, tag, title, content }, idx) => (
               <Fragment key={id}>
@@ -35,7 +35,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
                   title={title}
                 />
                 {idx !== pageContext.posts.length - 1 && (
-                  <Divider margin="my-12" />
+                  <Divider margin="mt-8 mb-12" />
                 )}
               </Fragment>
             )
