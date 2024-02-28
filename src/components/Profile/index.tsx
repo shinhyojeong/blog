@@ -24,6 +24,7 @@ const aboutList: About[] = [
 export const Profile = () => (
   <div>
     <img
+      alt="profile"
       className="rounded-full"
       height="100px"
       src="images/profile.jpeg"
