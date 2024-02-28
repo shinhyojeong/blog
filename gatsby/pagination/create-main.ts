@@ -26,7 +26,7 @@ export const createMainPage = async ({
 }: Pick<CreatePagesArgs, 'actions' | 'graphql'>) => {
   const result = await graphql<AllContentFulPostRes>(`
     {
-      allContentfulPost {
+      allContentfulPost(sort: { createdAt: DESC }) {
         edges {
           node {
             contentful_id
