@@ -5,6 +5,7 @@ export type SEOProps = {
   pathname?: string
   title?: string
   description?: string
+  image?: string
   children?: ReactNode
 }
 
@@ -12,21 +13,21 @@ export const SEO = ({
   title,
   description,
   pathname = '/',
-  children
+  children,
+  image
 }: SEOProps) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
+    image: defaultImage,
     siteUrl
   } = useSiteMetadata()
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
-    url: `${siteUrl}, ${pathname}`,
-    icon: image
+    image: image || defaultImage,
+    url: `${siteUrl}/${pathname}`
   }
 
   return (
@@ -39,7 +40,6 @@ export const SEO = ({
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-      <link rel="icon" href={seo.icon} />
       {children}
     </>
   )

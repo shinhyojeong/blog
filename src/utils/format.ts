@@ -20,7 +20,7 @@ export const formatDate = (date: string) => {
   return `${MONTH[Number(month) - 1]} ${day}, ${year}`
 }
 
-const MAX_DESCRIPTION_COUNT = 160
+const MAX_DESCRIPTION_COUNT = 150
 
 export const formatMetaDescription = (content: string) =>
   content.replace(REGEX.REMOVE_HTML_TAG, '').slice(0, MAX_DESCRIPTION_COUNT)
