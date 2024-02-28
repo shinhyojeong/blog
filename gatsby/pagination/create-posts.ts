@@ -1,5 +1,6 @@
 import path from 'path'
 import type { CreatePagesArgs } from 'gatsby'
+import { PAGE_URLS } from '../../src/constants'
 
 type AllContentFulPostRes = {
   allContentfulPost: {
@@ -45,7 +46,7 @@ export const createPostsPage = async ({
     const { title, content, tag, ...post } = node
 
     actions.createPage({
-      path: `/posts/${tag}/${title}`,
+      path: PAGE_URLS.POST(tag, title),
       component: path.resolve('./src/templates/post.tsx'),
       context: {
         post: {

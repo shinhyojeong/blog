@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
-import { Divider, Preview, Profile } from '~/components'
+import { Divider, Preview, Profile, SEO } from '~/components'
 import { Layout } from '~/layout'
 import { formatDate } from '~/utils'
 import type { PageProps } from 'gatsby'
+import { PAGE_URLS } from '~/constants'
 
 type PageContext = {
   posts: {
@@ -29,7 +30,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
                 <Preview
                   content={content}
                   date={formatDate(createdAt)}
-                  link={`/posts/${tag}/${title}`}
+                  link={PAGE_URLS.POST(tag, title)}
                   tag={tag}
                   title={title}
                 />
@@ -44,5 +45,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
     </section>
   </Layout>
 )
+
+export const Head = () => <SEO />
 
 export default main
