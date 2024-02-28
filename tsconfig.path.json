@@ -6,6 +6,8 @@
       "~/components": ["components"],
       "~/constants/*": ["constants/*"],
       "~/constants": ["constants"],
+      "~/hooks/*": ["hooks/*"],
+      "~/hooks": ["hooks"],
       "~/layout/*": ["layout/*"],
       "~/layout": ["layout"],
       "~/styles/*": ["styles/*"],

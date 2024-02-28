@@ -15,6 +15,8 @@ exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
         '~/components': getPath('/components'),
         '~/constants/*': getPath('/constants/*'),
         '~/constants': getPath('/constants'),
+        '~/hooks/*': getPath('/hooks/*'),
+        '~/hooks': getPath('/hooks'),
         '~/layout/*': getPath('/layout/*'),
         '~/layout': getPath('/layout'),
         '~/styles/*': getPath('/styles/*'),
