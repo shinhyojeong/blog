@@ -24,7 +24,7 @@ const post = ({ pageContext }: PageProps<object, PageContext>) => {
   return (
     <Layout>
       <div className="mx-auto max-w-3xl">
-        <div className="pb-3 pt-12">
+        <div className="pb-3 pt-12 max-md:pt-8">
           <h1>{pageContext.post.title}</h1>
           <p className="mt-4 text-gray-500">
             {formatDate(pageContext.post.createdAt)}
