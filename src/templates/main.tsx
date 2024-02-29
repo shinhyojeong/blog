@@ -16,7 +16,7 @@ type PageContext = {
 }
 
 const main = ({ pageContext }: PageProps<object, PageContext>) => (
-  <Layout className="h-screen flex-col">
+  <Layout className="h-screen flex-col overflow-hidden max-md:overflow-auto">
     <div className="max-md:border-r-none max-md:pt- fixed h-full w-80 border-r border-solid border-gray-200 p-6 pl-0 max-md:relative max-md:h-auto max-md:w-full max-md:border-b max-md:border-r-0 max-md:border-solid max-md:border-gray-200">
       <Profile />
     </div>
