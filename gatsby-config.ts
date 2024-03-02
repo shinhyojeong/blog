@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
-              showLineNumbers: true
+              classPrefix: 'language-'
             }
           }
         ]

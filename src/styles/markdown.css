@@ -53,6 +53,8 @@
     font-weight: 600;
     border-radius: 4px;
     background-color: #f2f2f2;
+    color: #386e34;
+    text-shadow: none;
   }
 
   em {
