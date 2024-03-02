@@ -25,9 +25,18 @@ const config: GatsbyConfig = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: ['gatsby-remark-prismjs']
+        ootnotes: true,
+        gfm: true,
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true
+            }
+          }
+        ]
       }
     },
     {
@@ -35,14 +44,6 @@ const config: GatsbyConfig = {
       options: {
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        ootnotes: true,
-        gfm: true,
-        plugins: []
       }
     },
     {
