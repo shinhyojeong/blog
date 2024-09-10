@@ -24,18 +24,16 @@
 }
 
 body {
-  font-family: 'Pretandard', 'sarif';
-
   h1 {
     font-weight: 700;
     line-height: 52px;
-    font-size: 38px;
+    font-size: 24px;
   }
 
   h2 {
     font-weight: 700;
     line-height: 24px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   button {

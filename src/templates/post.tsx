@@ -1,9 +1,9 @@
 import { Divider, SEO, Tag } from '~/components'
 import { Layout } from '~/layout'
 import { formatDate, formatMetaDescription } from '~/utils'
+import { PAGE_URLS } from '../constants'
 import type { HeadProps, PageProps } from 'gatsby'
 import '~/styles/markdown.css'
-import { PAGE_URLS } from '../constants'
 
 type PageContext = {
   post: {
@@ -39,9 +39,9 @@ const post = ({ pageContext }: PageProps<object, PageContext>) => (
 
 export const Head = ({ pageContext }: HeadProps<object, PageContext>) => (
   <SEO
-    title={pageContext.post.title}
     description={formatMetaDescription(pageContext.post.content)}
     pathname={PAGE_URLS.POST(pageContext.post.tag, pageContext.post.title)}
+    title={pageContext.post.title}
   />
 )
 

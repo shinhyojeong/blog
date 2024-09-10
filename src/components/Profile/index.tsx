@@ -1,3 +1,4 @@
+import { Box } from '../Box'
 import { Icon } from '../Icon'
 import type { IconKeys } from '~/constants'
 
@@ -22,7 +23,7 @@ const aboutList: About[] = [
 ]
 
 export const Profile = () => (
-  <div>
+  <Box>
     <img
       alt="profile"
       className="rounded-full"
@@ -30,8 +31,8 @@ export const Profile = () => (
       src="images/profile.jpeg"
       width="100px"
     />
-    <p className="mt-4 text-lg font-bold">Hyojeong Shin</p>
-    <p className="text-base leading-5 text-zinc-500">
+    <p className="mt-4 text-base font-bold">Hyojeong Shin</p>
+    <p className="text-sm leading-5 text-zinc-500">
       {`Hi there 👋 I'm Hyojeong, a frontend developer.`}
     </p>
     <div className="mt-6 flex gap-1">
@@ -43,5 +44,5 @@ export const Profile = () => (
         </li>
       ))}
     </div>
-  </div>
+  </Box>
 )
