@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
 import { useSiteMetadata } from '~/hooks'
+import type { ReactNode } from 'react'
 
 export type SEOProps = {
   pathname?: string
@@ -33,24 +33,24 @@ export const SEO = ({
   return (
     <>
       <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta content={seo.description} name="description" />
+      <meta content={seo.image} name="image" />
 
-      <meta property="og:url" content={seo.url} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={seo.title} />
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:locale" content="ko" />
-      <meta property="og:image" content={seo.image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta content={seo.url} property="og:url" />
+      <meta content="website" property="og:type" />
+      <meta content={seo.title} property="og:site_name" />
+      <meta content={seo.title} property="og:title" />
+      <meta content={seo.description} property="og:description" />
+      <meta content="ko" property="og:locale" />
+      <meta content={seo.image} property="og:image" />
+      <meta content="1200" property="og:image:width" />
+      <meta content="630" property="og:image:height" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:url" content={seo.url} />
-      <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
+      <meta content="summary_large_image" name="twitter:card" />
+      <meta content={seo.title} name="twitter:title" />
+      <meta content={seo.url} name="twitter:url" />
+      <meta content={seo.description} name="twitter:description" />
+      <meta content={seo.image} name="twitter:image" />
       {children}
     </>
   )

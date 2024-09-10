@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
 import { Divider, Preview, Profile, SEO } from '~/components'
+import { PAGE_URLS } from '~/constants'
 import { Layout } from '~/layout'
 import { formatDate } from '~/utils'
 import type { PageProps } from 'gatsby'
-import { PAGE_URLS } from '~/constants'
 
 type PageContext = {
   posts: {
