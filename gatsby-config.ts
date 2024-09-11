@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
-import type { GatsbyConfig } from 'gatsby'
 import { BASE_URLS } from './src/constants'
+import type { GatsbyConfig } from 'gatsby'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
@@ -8,7 +8,7 @@ dotenv.config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: '신효정 개발 블로그',
+    title: '신효정 개발 블로그(Shinhyojeong Dev Blog)',
     description: '웹 프론트엔드 개발자 신효정입니다.',
     image: '/images/profile.jpeg',
     siteUrl: BASE_URLS,
