@@ -12,7 +12,7 @@ export type PreviewProps = {
 
 export const Preview = ({ title, content, tag, date, link }: PreviewProps) => (
   <a href={link}>
-    <Box className="p-6">
+    <Box className="p-6 transition duration-300 ease-in-out hover:transition-shadow">
       <div className="cursor-pointer">
         <p className="text-base text-gray-500">{date}</p>
         <div className="mt-1">

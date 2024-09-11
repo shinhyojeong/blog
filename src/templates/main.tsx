@@ -22,8 +22,7 @@ const main = ({ pageContext }: PageProps<object, PageContext>) => (
     </div>
     <section className="ml-80 h-screen overflow-hidden pb-14 pl-6 pr-0 max-md:relative max-md:m-0 max-md:h-auto max-md:pl-0">
       <div className="h-full overflow-scroll pr-3 pt-6 max-md:pr-0">
-        <h1>게시글 목록</h1>
-        <div className="mt-3 flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
           {pageContext.posts?.map(({ id, createdAt, tag, title, content }) => (
             <Fragment key={id}>
               <Preview
